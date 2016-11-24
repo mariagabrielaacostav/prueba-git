@@ -1,0 +1,109 @@
+//@import "variables.sass"  - Puedo importar funciones de otro archivo
+
+
+// Varaible de colores
+
+
+$gris: #95a5a6
+$gris-oscuro: #34495e
+$gris-alfa: rgba(149,165,166,.5)
+$azul: #3498db
+$blanco: #fff
+
+
+    
+//MIXINS
+=transicion($valor)
+    transition: $valor
+    -webkit-transition: $valor
+    -moz-transition: $valor
+    -o-transition: $valor
+    -ms-transition: $valor
+
+.parallax
+    height: 100vh
+    width: 100%
+    background-image: url(../img/parallax1.jpg)
+    background-position: center center
+    background-size: cover
+    poosition: relative
+    background-attachment: fixed
+    
+.parallax h1
+    color: $azul;
+    text:
+        align: center
+        transform: uppercase
+        shadow: 2px 2px 2px $blanco
+    font: 
+        weight: bold
+        size: 3.5em
+    position: absolute
+    top: 40vh
+    width: 100%
+    
+    
+h1,h2,h4,h5
+    color: $gris-oscuro
+    
+.header-line
+    border: solid 2px $gris
+    width: 30px
+    float: left
+
+.img-fondo
+    width: 100%
+    height: 300px
+    background-position: center center
+    background-size: cover
+    position: relative
+    
+    
+.fondo-gris
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: $gris-alfa
+    +transicion(all 300ms ease)
+    opacity: 0
+    
+    
+.fondo-gris:hover
+    opacity: 1
+
+.list-inline
+    width: 100%
+    position: absolute
+    bottom: 0
+    text-align: center
+    
+.btn-social
+    width: 50px
+    
+.well
+    border-radius: 0
+    
+.well h4
+    font:
+        size: 1.6em
+        weight: bold
+        letter-spacing: 0.5px
+        
+.well h5
+    font-size: 17px
+    
+.lead
+    color: $gris-oscuro
+    font-size: 15px
+    font-weight: lighter
+   
+        
+    
+    
+    
+    
+
+    
+    
